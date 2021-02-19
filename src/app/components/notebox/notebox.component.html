@@ -1,0 +1,24 @@
+<div class="answer left" *ngIf="!data.isInput">
+    <avatar [path]="data.photo"></avatar>
+    <span class="name">{{data.name}} {{data.surname}}</span>
+    <span class="time">{{data.publishingDate}} - {{data.publishingTime}}</span>
+    <div class="text" >
+        <span [innerHTML]="textTruncated != '' && !readMoreClicked ? textTruncated : data.text"></span>&nbsp;<span class="readMore" *ngIf="textTruncated!='' && !readMoreClicked"  (click)="readMoreText()">[...]</span>
+        
+    </div>
+
+</div>
+<div class="answer right" *ngIf="data.isInput">
+    <avatar [path]="data.photo"></avatar>
+    <span class="name">{{data.name}} {{data.surname}}</span>
+    <span class="time">{{data.publishingDate}} - {{data.publishingTime}}</span>
+    <div class="text" >
+        <span [innerHTML]="textTruncated != '' && !readMoreClicked ? textTruncated : data.text"></span>&nbsp;<span class="readMore" *ngIf="textTruncated!='' && !readMoreClicked"  (click)="readMoreText()">[...]</span>
+        
+    </div>
+    
+
+
+
+
+</div>

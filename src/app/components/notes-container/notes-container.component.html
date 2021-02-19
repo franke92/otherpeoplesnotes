@@ -1,0 +1,21 @@
+<div class="box box-4">
+    <div class="box-content">
+        <div class="container">
+            <div class="content container-fluid bootstrap snippets bootdey">
+              <div #scrollDiv class="row row-broken" >
+                    
+                    <div class="col-sm-9 col-xs-12 chat">
+                        <div class="col-inside-lg decor-default">
+                            <div class="chat-body">                                
+                                  <notebox *ngFor="let item of notes" [data]="item"></notebox>
+                            </div>
+                            <!-- <div class="opaque" >
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <inputbox (notesWritten)="onWriteNotes($event)"></inputbox>
+            </div>
+        </div>
+    </div>
+</div>

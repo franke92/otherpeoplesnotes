@@ -1,0 +1,24 @@
+.readMore {
+    cursor:pointer;
+    color:blue;
+    text-decoration:underline;
+}
+.readMore:hover {
+    text-decoration:none;
+    text-shadow: 1px 1px 1px #555;
+}
+
+
+@media only screen and (max-width:600px){
+.name {
+    line-height: 36px;
+    font: normal normal bold 10px 'Univers LT Std' !important;
+    
+}
+.time {
+    line-height: 36px;
+    font: normal normal bold 10px 'Univers LT Std' !important;
+    
+}
+
+}
