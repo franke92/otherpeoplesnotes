@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ResourceService } from 'src/app/services/resource.service';
 
 @Component({
@@ -9,9 +9,11 @@ import { ResourceService } from 'src/app/services/resource.service';
 export class NotesContainerComponent implements OnInit {
   /**@internal */
   notes: any = [];
-  @ViewChild('scrollDiv', { static: false }) scrollingDiv: ElementRef;
 
-  constructor(private resource: ResourceService) { }
+  @ViewChild('scrollDiv', { static: false }) scrollingDiv: ElementRef;
+  @ViewChild('opaqueDiv', { static: false }) opaqueDiv: ElementRef;
+
+  constructor(private resource: ResourceService, private renderer : Renderer2) { }
 
 
   ngOnInit() {
@@ -30,6 +32,28 @@ export class NotesContainerComponent implements OnInit {
   ngAfterViewInit() {
     this.scrollToBottom();
 
+  }
+
+  /** Manage on resize device event and adapt the dynamics opaque div */
+  onResize() {
+    this.renderer.setStyle(
+      this.opaqueDiv.nativeElement, 
+      'width', 
+      this.scrollingDiv.nativeElement.offsetWidth-10+`px` //-10px as scrollingbar size
+    );
+  }
+
+
+  ngAfterViewChecked(){
+      /** dynamically adapting the width of the opaque div with the dimension of box */
+    this.renderer.setStyle(
+      this.opaqueDiv.nativeElement, 
+      'width', 
+      this.scrollingDiv.nativeElement.offsetWidth-10+`px` //-10px as scrollingbar size
+    );
+    
+    
+    
   }
 
   onWriteNotes(e: any): void {

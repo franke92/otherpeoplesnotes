@@ -1,39 +1,14 @@
 .opaque{
-    width: 87%;
+    width: 100%;
     position: fixed;
     height: 90px;
-    margin-top: -20px;
     background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    z-index:1;
+    margin-top: -1px;
+
 }
 
-@media only screen and (max-width: 600px) {
-    .opaque{
-        width: 73%;
-        position: fixed;
-        height: 90px;
-        margin-top: -20px;
-        background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-    }
-  }
 
-  @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .opaque{
-        width: 86%;
-        position: fixed;
-        height: 90px;
-        margin-top: -20px;
-        background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-    }
-  }
-  @media only screen and (min-width: 787px) and (max-width: 1050px) {
-    .opaque{
-        width: 84%;
-        position: fixed;
-        height: 90px;
-        margin-top: -20px;
-        background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-    }
-  }
 
   @media only screen and (max-width: 1150px) {
   .box-4 {
@@ -41,5 +16,5 @@
     position: relative;
     width: 80%;
     margin: 20px 0px 0px 40px;
-}
+    }
   }

@@ -1,5 +1,10 @@
 /** custom scroll bar **/
-
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #667790;
+  }
+  
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
