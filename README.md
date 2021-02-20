@@ -1,4 +1,4 @@
-# Other people notes
+# Other people's notes
 
 ## Table of contents
 * [General info](#general-info)
