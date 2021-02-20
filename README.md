@@ -9,7 +9,7 @@
 
 ## General info
 This project is a development of a component representing a blocknotes containing notes written by some people. The user can write new notes.
-<img src="https://github.com/franke92/otherpeoplesnotes/blob/main/src/assets/img/example.png" alt="example" />
+<img src="https://github.com/franke92/otherpeoplesnotes/blob/main/src/assets/img/example.PNG" alt="example" />
 
 	
 ## Technologies
