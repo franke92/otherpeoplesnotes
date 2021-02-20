@@ -37,7 +37,7 @@ The blocknotes component is subdivided into 4 little components: the note's cont
 
 
 ## Demo
-It's available a working Demo deployed on `codesandbox.io` :  https://q9nhv.csb.app/
+It's available a working Demo deployed on `codesandbox.io` on this <a href="https://q9nhv.csb.app/" target="_blank">link</a>
 
 ## Setup
 To run this project, install it locally using npm:
