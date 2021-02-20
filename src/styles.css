@@ -45,42 +45,37 @@ body{
     padding: 20px;
     
 }
-.chat {
+.notes {
     height: calc(100vh - 180px);
 }
 .decor-default {
     
     border-color:black;
-    background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
-    
+     
 }
-/* .chat-users h6 {
-    font-size: 20px;
-    margin: 0 0 20px;
-} */
-.chat-users .user {
+.notes-users .user {
     position: relative;
     padding: 0 0 0 50px;
     display: block;
     cursor: pointer;
     margin: 0 0 20px;
 }
-.chat-users .user .avatar {
+.notes-users .user .avatar {
     top: 0;
     left: 0;
 }
-.chat .avatar {
+.notes .avatar {
     width: 40px;
     height: 40px;
     position: absolute;
 }
-.chat .avatar img {
+.notes .avatar img {
     display: block;
     border-radius: 20px;
     height: 100%;
 }
 
-.chat-users .user .name {
+.notes-users .user .name {
     font-weight: bold;
     line-height: 20px;
     white-space: nowrap;
@@ -90,15 +85,15 @@ body{
 }
 
 
-/*****************CHAT BODY *******************/
+/*****************notes BODY *******************/
 
-.chat-body .answer.left {
+.notes-body .answer.left {
     padding: 0 0 0 58px;
     text-align: left;
     float: left;
     padding-bottom: 30px;
 }
-.chat-body .answer {
+.notes-body .answer {
     position: relative;
     max-width: 600px;
     overflow: hidden;
@@ -107,23 +102,23 @@ body{
     letter-spacing: 0px;
     color: #000000;
 }
-.chat-body .answer.left .avatar {
+.notes-body .answer.left .avatar {
     left: 0;
 }
-/* .chat-body .answer .avatar {
+/* .notes-body .answer .avatar {
     
 } */
-.chat .avatar {
+.notes .avatar {
     width: 40px;
     height: 40px;
     position: absolute;
 }
-.chat .avatar img {
+.notes .avatar img {
     display: block;
     border-radius: 20px;
     height: 100%;
 }
-.chat-body .answer .name {
+.notes-body .answer .name {
     line-height: 36px;
     font: normal normal bold 14px/18px 'Univers LT Std';
     
@@ -133,11 +128,11 @@ body{
 }
 
 
-.chat-body .answer.left .text {
+.notes-body .answer.left .text {
     background: #EFF2F7 0% 0% no-repeat padding-box;
     color: #000000;
 }
-.chat-body .answer .text {
+.notes-body .answer .text {
     padding: 12px;
     line-height: 20px;
     position: relative;
@@ -147,12 +142,12 @@ body{
     padding-right: 30px;
     min-width: 130px;
 }
-.chat-body .answer.left .text:before {
+.notes-body .answer.left .text:before {
     left: -23px;
     border-right-color: #EFF2F7;
     border-right-width: 12px;
 }
-.chat-body .answer .text:before {
+.notes-body .answer .text:before {
     content: '';
     display: block;
     position: absolute;
@@ -160,13 +155,13 @@ body{
     border: 18px solid transparent;
     border-top-width: 0;
 }
-.chat-body .answer.left .time {
+.notes-body .answer.left .time {
     padding-left: 12px;
     color: #7B8A9F;
     float:right;
     
 }
-.chat-body .answer .time {
+.notes-body .answer .time {
     line-height: 36px;
     font: normal normal normal 12px/18px  'Univers LT Std';
     position: relative;
@@ -176,27 +171,27 @@ body{
 
 
 /*RIGHT*/
-.chat-body .answer.right {
+.notes-body .answer.right {
     padding: 0 58px 0 0;
     text-align: right;
     float: right;
     padding-bottom: 30px;
 }
 
-.chat-body .answer.right .avatar {
+.notes-body .answer.right .avatar {
     right: 0;
 }
 
-.chat-body .answer.right .text {
+.notes-body .answer.right .text {
     background:#C2CDDD 0% 0% no-repeat padding-box;;
     color: #000000;
 }
-.chat-body .answer.right .text:before {
+.notes-body .answer.right .text:before {
     right: -23px;
     border-left-color: #C2CDDD;
     border-left-width: 12px;
 }
-.chat-body .answer.right .time {
+.notes-body .answer.right .time {
     padding-right: 12px;
     color:#7B8A9F;
 }
@@ -222,7 +217,7 @@ body{
     color: black;
     font: normal normal normal 16px/24px 'Univers LT Std';
 }
-.chat input {
+.notes input {
     -webkit-appearance: none;
     border-radius: 0;
 }
@@ -240,22 +235,22 @@ body{
     border-radius: 4px;
 }
 
-.chat input::-webkit-input-placeholder {
+.notes input::-webkit-input-placeholder {
    color: #fff;
 }
 
-.chat input:-moz-placeholder { /* Firefox 18- */
+.notes input:-moz-placeholder { /* Firefox 18- */
    color: #fff;  
 }
 
-.chat input::-moz-placeholder {  /* Firefox 19+ */
+.notes input::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;  
 }
 
-.chat input:-ms-input-placeholder {  
+.notes input:-ms-input-placeholder {  
    color: #fff;  
 }
-.chat input {
+.notes input {
     -webkit-appearance: none;
     border-radius: 3px;
     border: 1px solid #C2CDDD;

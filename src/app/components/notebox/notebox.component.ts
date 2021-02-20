@@ -50,19 +50,19 @@ export class NoteboxComponent implements OnInit {
     }
 
     //the right one -> decommented following if the right one can be truncated
-    // if (this.textDivInput) {
-    //   var message_lines = document.getElementById('textdiv2');
-    //   var divheight = this.textDivInput.nativeElement.offsetHeight;
-    //   var divWidth = this.textDivInput.nativeElement.offsetWidth;
+    if (this.textDivInput) {
+      var message_lines = document.getElementById('textdiv2');
+      var divheight = this.textDivInput.nativeElement.offsetHeight;
+      var divWidth = this.textDivInput.nativeElement.offsetWidth;
 
 
-    //   var amount = this.countLinesAndCharacters(message_lines, divheight, divWidth);
-    //   if (amount.lines > 3) {
-    //     //trim 
-    //     this.textTruncated = this.data.text.substring(0, amount.amount_of_characters_in_a_line * 3);
-    //     this.lastText = this.data.text.substring(amount.amount_of_characters_in_a_line * 3)
-    //  this.cdRef.detectChanges();}
-    // }
+      var amount = this.countLinesAndCharacters(message_lines, divheight, divWidth);
+      if (amount.lines > 3) {
+        //trim 
+        this.textTruncated = this.data.text.substring(0, amount.amount_of_characters_in_a_line * 3);
+        this.lastText = this.data.text.substring(amount.amount_of_characters_in_a_line * 3)
+     this.cdRef.detectChanges();}
+    }
 
   }
   /**Handler of read more CTA */

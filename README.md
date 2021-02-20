@@ -1,3 +1,5 @@
+# Other people notes
+
 ## Table of contents
 * [General info](#general-info)
 * [Functionality](#functionality)
