@@ -1,6 +1,6 @@
 .readMore {
     cursor:pointer;
-    color:blue;
+    color:rgb(0, 0, 110);
     text-decoration:underline;
 }
 .readMore:hover {

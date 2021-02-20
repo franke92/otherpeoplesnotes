@@ -1,27 +1,58 @@
-# Egpchallenge
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Functionality](#functionality)
+* [Demo](#demo)
+* [Setup](#setup)
+* [Usage](#usage)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
-## Development server
+## General info
+This project is a development of a component representing a blocknotes containing notes written by some people. The user can write new notes.
+<img src="https://github.com/franke92/otherpeoplesnotes/blob/main/src/assets/img/example.png" alt="example" />
+
+	
+## Technologies
+Project is created with:
+* Angular version 8.3.4.
+* CSS3   
+* HTML5
+	
+
+
+## Functionality
+
+Data are actually receveid by a static json internal "notes.json" of the project but they can be easily receveid from external resources.
+Each note has same properties of its author : name, surname,  photo( or avatar), publishing date, publishing time and the text written.
+The blocknotes component is subdivided into 4 little components: the note's container, the notebox, the inputbox and the avatar.
+
+
+-  The application display “other people” notes in the element from a static JSON contained in the assets of the project called "notes.json"
+-  The final user can write text notes and publish it in the notes message list
+-  Each note has the photo of the author, her/his name-surname and the publishing date and time
+-  If a note is greater than three rows trim the rest of the content and show a “Read More” CTA  represented by `[...]` that expands the note message with the whole text.
+-  All notes are sorted by publishing date (newest at bottom)
+-  It's used browser LocalStorage for storing the messages that the final user have published  and keep them in the notes message list as long as user doesn’t delete browser cache (e.g. if I write: “Hello World!”, it will be displayed also if I refresh the page)
+-  The application is responsive: min-width: 375px, max-width 1200px;
+
+
+## Demo
+It's available a working Demo deployed on `codesandbox.io` :  https://q9nhv.csb.app/
+
+## Setup
+To run this project, install it locally using npm:
+
+```
+$ npm install
+```
+
+## Usage 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Future Improvements
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

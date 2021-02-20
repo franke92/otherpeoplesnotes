@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { INotesItem } from 'src/app/models/notes.model';
 
 
 @Component({
@@ -10,15 +11,19 @@ export class InputboxComponent implements OnInit {
 
   /**@internal */
   inputText: String;
-  note: any;
 
-  @Output() notesWritten: EventEmitter<any> = new EventEmitter<any>();
+   /**@internal */
+  note: INotesItem;
+
+  @Output() notesWritten: EventEmitter<INotesItem> = new EventEmitter<INotesItem>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  /** Compose the note item and emit to parent the result */
   onPublish(): void {
     if (this.inputText && this.inputText != '') {
       let today = new Date();

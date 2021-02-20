@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { INotesItem } from 'src/app/models/notes.model';
 
 @Component({
   selector: 'notebox',
@@ -6,31 +7,32 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./notebox.component.css']
 })
 export class NoteboxComponent implements OnInit {
-  @Input() data:any;
-  @Input() isInput:boolean = false;
+  @Input() data: INotesItem;
+  @Input() isInput: boolean = false; // if false is a text received from notes static json file else is text written by the user
 
   /**@internal */
-  readMoreClicked:boolean=false;
+  readMoreClicked: boolean = false;
 
   /**@internal */
-  textTruncated:String = '';
-  
+  textTruncated: String = '';
+
   /**@internal */
-  lastText:String = '';
+  lastText: String = '';
 
   constructor() { }
-  
+
   ngOnInit() {
-    console.log("data",this.data)
-    if(this.data.text.length > 226){
-      this.textTruncated = this.data.text.substring(0,221);
+
+    //truncate the text if too much long and activate the read more CTA
+    if (this.data.text.length > 226) {
+      this.textTruncated = this.data.text.substring(0, 221);
       this.lastText = this.data.text.substring(221)
 
     }
   }
-
-  readMoreText():void{
-    this.readMoreClicked=true;
+  /**Handler of read more CTA */
+  readMoreText(): void {
+    this.readMoreClicked = true;
   }
 
 }
