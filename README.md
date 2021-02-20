@@ -1,8 +1,9 @@
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
 * [Functionality](#functionality)
 * [Demo](#demo)
+* [Project structure](#project-structure)
+* [Technologies](#technologies)
 * [Setup](#setup)
 * [Usage](#usage)
 
@@ -11,7 +12,27 @@
 This project is a development of a component representing a blocknotes containing notes written by some people. The user can write new notes.
 <img src="https://github.com/franke92/otherpeoplesnotes/blob/main/src/assets/img/example.PNG" alt="example" />
 
-	
+## Functionality
+
+Data are actually receveid by a static json internal "notes.json" of the project but they can be easily receveid from external resources.
+Each note has same properties of its author : name, surname,  photo( or avatar), publishing date, publishing time and the text written.
+
+
+
+-  The application display “other people” notes in the element from a static JSON contained in the assets of the project called "notes.json"
+-  The final user can write text notes and publish it in the notes message list
+-  Each note has the photo of the author, her/his name-surname and the publishing date and time
+-  If a note is greater than three rows trim the rest of the content and show a “Read More” CTA  represented by `[...]` that expands the note message with the whole text.
+-  All notes are sorted by publishing date (newest at bottom)
+-  It's used browser LocalStorage for storing the messages that the final user have published  and keep them in the notes message list as long as user doesn’t delete browser cache (e.g. if I write: “Hello World!”, it will be displayed also if I refresh the page)
+-  The application is responsive
+
+
+## Demo
+It's available a working Demo deployed on `codesandbox.io` on this <a href="https://q9nhv.csb.app/" target="_blank">link</a>
+
+
+
 ## Technologies
 Project is created with:
 * Angular version 8.3.4.
@@ -90,24 +111,7 @@ Images and `notes.json` file are placed into assets folder. Styles, if globals, 
 There's a service `resource.service` for handling an http GET request in order to achieve the file json in assets folder. 
 
 
-## Functionality
 
-Data are actually receveid by a static json internal "notes.json" of the project but they can be easily receveid from external resources.
-Each note has same properties of its author : name, surname,  photo( or avatar), publishing date, publishing time and the text written.
-
-
-
--  The application display “other people” notes in the element from a static JSON contained in the assets of the project called "notes.json"
--  The final user can write text notes and publish it in the notes message list
--  Each note has the photo of the author, her/his name-surname and the publishing date and time
--  If a note is greater than three rows trim the rest of the content and show a “Read More” CTA  represented by `[...]` that expands the note message with the whole text.
--  All notes are sorted by publishing date (newest at bottom)
--  It's used browser LocalStorage for storing the messages that the final user have published  and keep them in the notes message list as long as user doesn’t delete browser cache (e.g. if I write: “Hello World!”, it will be displayed also if I refresh the page)
--  The application is responsive: min-width: 375px, max-width 1200px;
-
-
-## Demo
-It's available a working Demo deployed on `codesandbox.io` on this <a href="https://q9nhv.csb.app/" target="_blank">link</a>
 
 ## Setup
 To run this project, install it locally using npm:
@@ -122,7 +126,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ## Future Improvements
-It's possibile to substitute localStorage functionality with some real process of data storage. For example it's possible to use (with some little modifications) the resource.service in order to receive from RESTFul web services the notes stored in some database for example and also to push the notes written by the user via POST http request to RESTful web services.
+It's possibile to substitute localStorage functionality with some real process of data storage. For example it's possible to use (with some little modifications) the resource.service in order to receive from a GET HTTP request to a RESTFul web services the notes stored in some database and, furthmore, web services can be used to push the notes written by the user via POST http request.
 
 
 

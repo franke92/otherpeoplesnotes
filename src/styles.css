@@ -54,10 +54,10 @@ body{
     background: transparent linear-gradient(0deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
     
 }
-.chat-users h6 {
+/* .chat-users h6 {
     font-size: 20px;
     margin: 0 0 20px;
-}
+} */
 .chat-users .user {
     position: relative;
     padding: 0 0 0 50px;
@@ -79,29 +79,7 @@ body{
     border-radius: 20px;
     height: 100%;
 }
-.chat .avatar .status.off {
-    border: 1px solid #5a5a5a;
-    background: #ffffff;
-}
-.chat .avatar .status.online {
-    background: #4caf50;
-}
-.chat .avatar .status.busy {
-    background: #ffc107;
-}
-.chat .avatar .status.offline {
-    background: #ed4e6e;
-}
-.chat-users .user .status {
-    bottom: 0;
-    left: 28px;
-}
-.chat .avatar .status {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    position: absolute;
-}
+
 .chat-users .user .name {
     font-weight: bold;
     line-height: 20px;
@@ -110,18 +88,10 @@ body{
     text-overflow: ellipsis;
     color: #0E141A
 }
-.chat-users .user .mood {
-    font: 200 14px/20px "Raleway", Verdana, sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 
 /*****************CHAT BODY *******************/
-.chat-body h6 {
-    font-size: 20px;
-    margin: 0 0 20px;
-}
+
 .chat-body .answer.left {
     padding: 0 0 0 58px;
     text-align: left;
@@ -162,12 +132,7 @@ body{
     float:left;
 }
 
-.chat-body .answer.left .avatar .status {
-    right: 4px;
-}
-.chat-body .answer .avatar .status {
-    bottom: 0;
-}
+
 .chat-body .answer.left .text {
     background: #EFF2F7 0% 0% no-repeat padding-box;
     color: #000000;
@@ -221,9 +186,7 @@ body{
 .chat-body .answer.right .avatar {
     right: 0;
 }
-.chat-body .answer.right .avatar .status {
-    left: 4px;
-}
+
 .chat-body .answer.right .text {
     background:#C2CDDD 0% 0% no-repeat padding-box;;
     color: #000000;
@@ -342,14 +305,4 @@ input::-webkit-input-placeholder {
 input[type="text"] {
     box-sizing: border-box;
     padding-left: 20px;
-}
-
-.boxed{
-    top: 264px;
-left: 405px;
-width: 1110px;
-height: 599px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #C2CDDD;
-opacity: 1;
 }

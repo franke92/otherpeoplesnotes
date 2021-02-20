@@ -32,7 +32,7 @@ export class InputboxComponent implements OnInit {
         surname: "",
         publishingDate: today.toISOString().slice(0, 10),
         publishingTime: today.getHours() + ":" + ('0' + today.getMinutes()).slice(-2),
-        photo: "assets/img/avatar6.png",
+        photo: "assets/img/avatar7.png",
         text: JSON.parse(JSON.stringify(this.inputText)),
         isInput: true
       }
