@@ -1,7 +1,18 @@
 @font-face {font-family: "Univers LT Std 45 Light"; src: url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.eot"); src: url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.woff") format("woff"), url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e9667fe0f148a4644cad185c71da0a6e.svg#Univers LT Std 45 Light") format("svg"); }
 
 /** custom scroll bar **/
-
+::-moz-scrollbar {
+    width: 10px;
+  }
+  
+  ::-moz-scrollbar-track {
+    background: white;
+  }
+  
+  ::-moz-scrollbar-thumb {
+    background: #667790;
+    border-right: 1px solid white;
+  }
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -39,6 +50,7 @@ body{
     padding-bottom: 0;
     height:450px;
     overflow-y: scroll;
+    scrollbar-width: thin; /** For Firefox that does not support webkit*/
     
 }
 .col-inside-lg {
