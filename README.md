@@ -17,11 +17,11 @@ This project is a development of a component representing a blocknotes containin
 ## Functionality
 
 Data are actually receveid by a static json internal "notes.json" of the project but they can be easily receveid from external resources.
-Each note has same properties of its author : name, surname,  photo( or avatar), publishing date, publishing time and the text written.
+Each note has same properties of its author : name, surname, photo( or avatar), publishing date, publishing time and the text written.
 
 
 
--  The application display “other people” notes in the element from a static JSON contained in the assets of the project called "notes.json"
+-  The application displays “other people” notes in the element from a static JSON contained in the assets of the project called "notes.json"
 -  The final user can write text notes and publish it in the notes message list
 -  Each note has the photo of the author, her/his name-surname and the publishing date and time
 -  If a note is greater than three rows trim the rest of the content and show a “Read More” CTA  represented by `[...]` that expands the note message with the whole text.
@@ -108,7 +108,7 @@ The following tree describes as the project is structured
 </pre>
 
 
-As it's shown above, the `otherpeoplenotes` application is dividided into 4 little angular components: the note's container, the notebox, the inputbox and the avatar.
+As shown above, the `otherpeoplenotes` application is dividided into 4 little angular components: the note's container, the notebox, the inputbox and the avatar.
 Images and `notes.json` file are placed into assets folder. Styles, if globals, are written into file `style.css` otherwise each component has its own file css.
 There's a service `resource.service` for handling an http GET request in order to achieve the file json in assets folder. 
 
@@ -124,11 +124,11 @@ $ npm install
 
 ## Usage 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 
 ## Future Improvements
-It's possibile to substitute localStorage functionality with some real process of data storage. For example it's possible to use (with some little modifications) the resource.service in order to receive from a GET HTTP request to a RESTFul web services the notes stored in some database and, furthmore, web services can be used to push the notes written by the user via POST http request.
+It's possibile to substitute localStorage functionality with some real process of data storage. For example it's possible to use (with some little modifications) the resource.service in order to receive from a GET HTTP request to a RESTFul web services the notes stored in some database and, furthmore, web services can be used to store the notes written by the user via POST http request.
 
 
 

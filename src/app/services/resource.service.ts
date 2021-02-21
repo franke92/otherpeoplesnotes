@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { INotes } from '../models/notes.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ export class ResourceService {
 
   constructor(private http: HttpClient) { }
 
-  public getNotes(): Observable<any> {
+  public getNotes(): Observable<INotes> {
     const url: string = this.NotesLocalUrl;
-    return this.http.get<any>(url).pipe();
+    return this.http.get<INotes>(url).pipe();
 }
 }
 
